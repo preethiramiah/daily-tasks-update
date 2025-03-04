@@ -85,6 +85,10 @@ app.post('/update-sheet', async (req, res) => {
   }
 })
 
+app.get('/', async (req, res) => {
+  res.status(200).json({ message: 'Server is running' })
+})
+
 app.get('/get-tasks-by-date', async (req, res) => {
   const { spreadsheetId, range, date } = req.query
 
